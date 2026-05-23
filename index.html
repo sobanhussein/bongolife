@@ -1,24 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <style>
-        body { margin: 0; background: #000; overflow: hidden; cursor: crosshair; }
-        canvas { display: block; }
-    </style>
-</head>
-<body>
-    <canvas id="silk"></canvas>
-    <script>
-        const canvas = document.getElementById('silk');
-        const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth; canvas.height = window.innerHeight;
-        document.addEventListener('mousemove', (e) => {
-            ctx.fillStyle = 'hsla(' + Math.random() * 360 + ', 100%, 50%, 0.5)';
-            ctx.beginPath();
-            ctx.arc(e.clientX, e.clientY, 10, 0, Math.PI * 2);
-            ctx.arc(window.innerWidth - e.clientX, e.clientY, 10, 0, Math.PI * 2);
-            ctx.fill();
-        });
-    </script>
-</body>
+<head><title>Bongo Life</title></head>
+<body><h1>Bongo Life: Automation Active</h1></body>
 </html>
