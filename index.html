@@ -3,22 +3,18 @@
 <head>
     <meta charset='UTF-8'>
     <style>
-        body { margin: 0; background: #000; color: #fff; font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
-        .cinematic-hero { 
-            height: 100vh; display: flex; align-items: center; justify-content: center; 
-            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('https://cdn.pixabay.com/photo/2016/11/14/04/45/elephant-1822636_1920.jpg'); 
-            background-size: cover; background-position: center;
-            animation: kenburns 20s infinite alternate ease-in-out;
-        }
-        @keyframes kenburns { from { transform: scale(1); } to { transform: scale(1.1); } }
-        .easter-egg { opacity: 0; position: absolute; top: 10px; right: 10px; cursor: help; }
-        .easter-egg:hover { opacity: 1; transition: 0.5s; }
+        body { margin: 0; background: #050505; color: #fff; font-family: 'Helvetica Neue', sans-serif; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); gap: 5px; }
+        .img-container { height: 80vh; overflow: hidden; position: relative; }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.8); }
+        h1 { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 6rem; z-index: 10; text-transform: uppercase; letter-spacing: 10px; }
     </style>
 </head>
 <body>
-    <div class='cinematic-hero'>
-        <h1 style='font-size: 8rem;'>SERENGETI</h1>
-        <div class='easter-egg'>Unlocked by: husse</div>
+    <h1>Tanzania</h1>
+    <div class='gallery'>
+        <div class='img-container'><img src='https://images.unsplash.com/photo-1523805009345-7448845a9e53?q=80&w=2000'></div>
+        <div class='img-container'><img src='https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=2000'></div>
     </div>
 </body>
 </html>
