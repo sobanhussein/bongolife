@@ -3,21 +3,25 @@
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Bongo Life | Explore Tanzania</title>
+    <title>Bongo Life | Premium Holidays</title>
     <style>
-        body { margin: 0; font-family: sans-serif; background: #000; color: #fff; text-align: center; }
-        header { padding: 40px; background: #1a1a1a; }
-        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; padding: 20px; }
-        .gallery img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; transition: 0.3s; }
-        .gallery img:hover { transform: scale(1.05); }
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #f4f4f4; color: #333; }
+        header { background: #fff; padding: 20px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .hero { height: 60vh; background: url('https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=1600') center/cover; display: flex; align-items: center; justify-content: center; color: white; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 40px; }
+        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); }
+        .card img { width: 100%; height: 200px; object-fit: cover; }
+        .card h3 { padding: 0 15px; }
     </style>
 </head>
 <body>
-    <header><h1>Bongo Life: Discover Tanzania</h1></header>
-    <div class='gallery'>
-        <img src='https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=800' alt='Zanzibar Beach'>
-        <img src='https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800' alt='Safari'>
-        <img src='https://images.unsplash.com/photo-1590479773265-7496c1671911?w=800' alt='Tanzania Landscape'>
+    <header><h1>Bongo Life</h1></header>
+    <div class='hero'><h1>Experience Tanzania</h1></div>
+    <div class='grid'>
+        <div class='card'><img src='https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600'><h3>Safari Tours</h3></div>
+        <div class='card'><img src='https://images.unsplash.com/photo-1590479773265-7496c1671911?w=600'><h3>Beach Getaways</h3></div>
+        <div class='card'><img src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600'><h3>Zanzibar Island</h3></div>
     </div>
 </body>
 </html>
