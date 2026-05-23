@@ -3,17 +3,21 @@
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Bongo Life | Modern Hub</title>
+    <title>Bongo Life | Explore Tanzania</title>
     <style>
-        body { margin: 0; font-family: sans-serif; background: #111; color: #fff; }
-        header { padding: 20px; background: #222; text-align: center; border-bottom: 2px solid #444; }
-        .hero { padding: 100px 20px; text-align: center; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80'); background-size: cover; }
-        .container { max-width: 800px; margin: 40px auto; padding: 20px; }
+        body { margin: 0; font-family: sans-serif; background: #000; color: #fff; text-align: center; }
+        header { padding: 40px; background: #1a1a1a; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; padding: 20px; }
+        .gallery img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; transition: 0.3s; }
+        .gallery img:hover { transform: scale(1.05); }
     </style>
 </head>
 <body>
-    <header><h1>Bongo Life</h1></header>
-    <div class='hero'><h1>Holiday Escape</h1><p>Experience the ultimate freedom</p></div>
-    <div class='container'><h2>Welcome</h2><p>Our new trendy layout is active.</p></div>
+    <header><h1>Bongo Life: Discover Tanzania</h1></header>
+    <div class='gallery'>
+        <img src='https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=800' alt='Zanzibar Beach'>
+        <img src='https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800' alt='Safari'>
+        <img src='https://images.unsplash.com/photo-1590479773265-7496c1671911?w=800' alt='Tanzania Landscape'>
+    </div>
 </body>
 </html>
