@@ -3,47 +3,26 @@
 <head>
     <meta charset='UTF-8'>
     <style>
-        body { margin: 0; background: #0a0a0a; color: #fff; font-family: 'Syne', sans-serif; overflow-x: hidden; cursor: none; }
-        #canvas { position: fixed; top: 0; left: 0; z-index: 0; }
-        .content { position: relative; z-index: 1; padding: 100px; }
-        .glass-card { 
-            background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 30px;
-            padding: 50px; transition: 0.5s; overflow: hidden;
+        body { margin: 0; background: #000; color: #fff; font-family: 'Syne', sans-serif; }
+        .hero { 
+            height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=2000'); 
+            background-size: cover; background-position: center;
         }
-        .glass-card:hover { border-color: rgba(255, 255, 255, 0.5); transform: translateY(-10px); }
-        .geo-pattern { width: 100px; height: 100px; background: conic-gradient(from 45deg, #d4af37 25%, transparent 0); transition: 0.3s; }
-        .geo-pattern:hover { transform: rotate(180deg) scale(1.2); }
+        h1 { font-size: 8rem; margin: 0; letter-spacing: -2px; text-transform: uppercase; }
+        .premium-card { 
+            margin-top: 50px; padding: 40px; border: 1px solid rgba(255,255,255,0.2); 
+            backdrop-filter: blur(15px); border-radius: 20px; background: rgba(255,255,255,0.05);
+        }
     </style>
 </head>
 <body>
-    <canvas id='canvas'></canvas>
-    <div class='content'>
-        <div class='geo-pattern'></div>
-        <h1 style='font-size: 5rem;'>TANZANIA ELITE</h1>
-        <div class='glass-card'>
-            <h2>3D Property Tour</h2>
-            <p>Scroll to initiate immersive rendering...</p>
+    <div class='hero'>
+        <h1>TANZANIA ELITE</h1>
+        <div class='premium-card'>
+            <h2>Immersive Property Portfolio</h2>
+            <p>Scroll to explore high-end architectural renders.</p>
         </div>
     </div>
-    <script>
-        const canvas = document.getElementById('canvas');
-        const ctx = canvas.getContext('2d');
-        let particles = [];
-        canvas.width = window.innerWidth; canvas.height = window.innerHeight;
-        window.addEventListener('mousemove', e => {
-            particles.push({x: e.clientX, y: e.clientY, life: 100});
-        });
-        function animate() {
-            ctx.clearRect(0,0, canvas.width, canvas.height);
-            particles.forEach((p, i) => {
-                ctx.fillStyle = '#d4af37';
-                ctx.beginPath(); ctx.arc(p.x, p.y, 2, 0, Math.PI*2); ctx.fill();
-                p.life--; if(p.life <= 0) particles.splice(i, 1);
-            });
-            requestAnimationFrame(animate);
-        }
-        animate();
-    </script>
 </body>
 </html>
